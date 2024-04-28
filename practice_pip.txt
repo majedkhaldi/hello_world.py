@@ -1,0 +1,85 @@
+
+
+C:\Users\Milani>cd Desktop\Axsos\Python_stack\My_environments
+
+C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>call test\Scripts\activate
+
+(test) C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>pip list
+Package  Version
+-------- -------
+pip      24.0
+pytz     2024.1
+sqlparse 0.5.0
+
+(test) C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>deactivate
+C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>pip3 list
+Package Version
+------- -------
+pip     24.0
+
+C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>call test\Scripts\activate
+
+(test) C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>pip install Django==2.2.4
+Collecting Django==2.2.4
+  Using cached Django-2.2.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: pytz in c:\users\milani\desktop\axsos\python_stack\my_environments\test\lib\site-packages (from Django==2.2.4) (2024.1)
+Requirement already satisfied: sqlparse in c:\users\milani\desktop\axsos\python_stack\my_environments\test\lib\site-packages (from Django==2.2.4) (0.5.0)
+Using cached Django-2.2.4-py3-none-any.whl (7.5 MB)
+Installing collected packages: Django
+Successfully installed Django-2.2.4
+
+(test) C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>pip freeze
+Django==2.2.4
+pytz==2024.1
+sqlparse==0.5.0
+
+(test) C:\Users\Milani\Desktop\Axsos\Python_stack\My_environments>cd..
+
+(test) C:\Users\Milani\Desktop\Axsos\Python_stack>cd..
+
+(test) C:\Users\Milani\Desktop\Axsos>cd..
+
+(test) C:\Users\Milani\Desktop>pip freeze > requirements.txt
+
+(test) C:\Users\Milani\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 1AE2-E6E9
+
+ Directory of C:\Users\Milani\Desktop
+
+04/28/2024  10:26 AM    <DIR>          .
+04/28/2024  10:26 AM    <DIR>          ..
+04/27/2024  06:37 PM    <DIR>          Axsos
+04/02/2024  09:55 AM    <DIR>          Axsos -up
+03/11/2024  09:29 PM    <DIR>          Backup
+04/24/2024  08:33 AM             2,232 Discord.lnk
+03/11/2024  09:08 PM             2,660 Excel 2016.lnk
+03/11/2024  08:57 PM             2,645 Facebook.lnk
+03/22/2024  03:26 PM             2,348 Microsoft Edge.lnk
+03/21/2024  12:22 PM    <DIR>          personal-HR&D
+03/11/2024  09:08 PM             2,654 PowerPoint 2016.lnk
+04/28/2024  10:26 AM                46 requirements.txt
+03/25/2024  12:22 PM             1,403 Visual Studio Code.lnk
+03/11/2024  09:09 PM             2,668 Word 2016.lnk
+03/11/2024  08:57 PM             2,643 YouTube.lnk
+04/23/2024  02:21 PM             1,934 Zoom.lnk
+              10 File(s)         21,233 bytes
+               6 Dir(s)  188,807,036,928 bytes free
+
+(test) C:\Users\Milani\Desktop>pip uninstall Django
+Found existing installation: Django 2.2.4
+Uninstalling Django-2.2.4:
+  Would remove:
+    c:\users\milani\desktop\axsos\python_stack\my_environments\test\lib\site-packages\django-2.2.4.dist-info\*
+    c:\users\milani\desktop\axsos\python_stack\my_environments\test\lib\site-packages\django\*
+    c:\users\milani\desktop\axsos\python_stack\my_environments\test\scripts\django-admin.exe
+    c:\users\milani\desktop\axsos\python_stack\my_environments\test\scripts\django-admin.py
+Proceed (Y/n)? y
+  Successfully uninstalled Django-2.2.4
+
+(test) C:\Users\Milani\Desktop>pip show Django
+WARNING: Package(s) not found: Django
+
+(test) C:\Users\Milani\Desktop>
+(test) C:\Users\Milani\Desktop>
+(test) C:\Users\Milani\Desktop>
