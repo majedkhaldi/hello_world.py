@@ -7,9 +7,9 @@
     <title>checkerboard</title>
 </head>
 <body>
-    {% for i in range (rows) %}
+    {% for i in range (rows // 2) %}
     <div class="roww">
-        {% for i in range (cols) %}
+        {% for i in range (cols // 2) %}
 
                 <div style="background-color: {{color1}};" class="box1"></div>
                 <div style="background-color: {{color2}};"class="box2"></div>
@@ -17,7 +17,7 @@
         {% endfor %}
     </div>
     <div class="roww">
-        {% for i in range (cols) %}
+        {% for i in range (cols // 2) %}
 
                 <div style="background-color: {{color2}};" class="box2"></div>
                 <div style="background-color: {{color1}};" class="box1"></div>
@@ -25,5 +25,14 @@
         {% endfor %}
     </div>
     {% endfor %}
+    {% if cols%2 == 1 %}
+        <div class="roww">
+            {% for i in range (cols // 2) %}
+
+                    <div style="background-color: {{color1}};" class="box1"></div>
+                    <div style="background-color: {{color2}};"class="box2"></div>
+             {% endfor %}
+        </div>
+    {% endif %}
 </body>
 </html>
