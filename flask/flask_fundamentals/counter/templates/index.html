@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>counter with functionality: {{session['counter']}} times</h1>
+    <h1>counter of refreshs: {{session['refreshs']}} times</h1>
+    <!-- <h1>{{count}} times</h1> -->
+    <form action="/process" method="post">
+        <button>increment by two</button>
+    </form>
+    <form action="/destroy_session" method="post">
+        <button>reset</button>
+    </form>
+    <form action="/incrementbyuser" method="post">
+        <input type="number" id="numberofincrements" name="inputuser" value = 0 min=0>
+        <button>increment</button>
+    </form>
+</body>
+</html>
