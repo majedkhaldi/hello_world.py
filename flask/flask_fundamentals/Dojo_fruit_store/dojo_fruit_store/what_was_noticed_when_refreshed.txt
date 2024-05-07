@@ -1,0 +1,5 @@
+*1* first thing to notice was that an alert "confirm form resubmission" poped it said: The page that you're looking for used information that you entered. Returning to that page might cause any action you took to be repeated. Do you want to continue?
+
+
+*2* also after checking the terminal i saw that the data from the form were retreived in a dictionary:
+ImmutableMultiDict([('strawberry', '2'), ('raspberry', '0'), ('apple', '4'), ('first_name', 'majed'), ('last_name', 'khaldi'), ('student_id', '123444')])
