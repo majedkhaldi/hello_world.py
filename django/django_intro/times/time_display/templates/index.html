@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Now!!</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static '/style.css' %}"> 	
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    
 </head>
 <body>
     <h3>The current time an date is</h3>
-    <div class="timebox">
-        <div class="timeanddate" style="font-size: 70px; "> <h1>{{time}} </h1> </div>
-        <div class="timeanddate" style="font-size: 70px; "> <h1>{{date}} </h1> </div>
+    <div>
+        <div class="timeanddate" > <h1>{{time}} </h1> </div>
+        <div class="timeanddate" > <h1>{{date}} </h1> </div>
     </div>
-
+    
+    <div class="timebox">
+        <h3>The current time using JavaScript</h3>
+        <span class="hrs"></span>
+        <span>:</span>
+        <span class="mins"></span>
+        <span>:</span>
+        <span class="sec"></span>
+    </div>
+    <script src="{% static '/script.js' %}"></script> 	
 </body>
 </html>
