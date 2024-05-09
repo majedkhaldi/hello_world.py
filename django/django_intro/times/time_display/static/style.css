@@ -1,0 +1,21 @@
+body {
+    background: rgb(122, 122, 116);
+    background: radial-gradient(circle, rgba(122, 122, 116, 0.9472163865546218) 11%, rgba(80, 252, 70, 1) 100%);
+    text-align: center;
+    padding-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timeanddate {
+    color: azure;
+    -webkit-text-stroke: 5px black;
+    margin-bottom: -100px;
+}
+h3 {
+    border: 5px dotted whitesmoke;
+    padding: 35px;
+    width: fit-content;
+    margin: 0 auto;
+    color: whitesmoke;
+    font-size: 25px;
+    margin-bottom: -50px;
+}
