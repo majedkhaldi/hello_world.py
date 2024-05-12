@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin-top: 150px; text-align: center;">
+    <h1 style="text-align: center; font-size: xx-large;">page visits counter</h1>
+    <h3 style="text-align: center; font-size: larger;">{{request.session.counter}} </h3>
+    <h1 style="text-align: center; font-size: xx-large;">user functionality counter</h1>
+    <h3 style="text-align: center; font-size: larger;">{{request.session.counter2}} </h3>
+    <button style="margin: 0 auto;"><a style="text-decoration: none;" href="/destroy_session">reset</a></button><br>
+    <button style="margin-top: 20px; margin: 0 auto;"><a style="text-decoration: none;" href="/incbytwo">increment by 2</a></button>
+   
+    <form action="incrementbyuser" method="post">
+    {% csrf_token %}
+    <input type="number" name="userinput" min="0" value="0"> 
+    <button>submit</button>
+    </form>
+
+</body>
+</html>
