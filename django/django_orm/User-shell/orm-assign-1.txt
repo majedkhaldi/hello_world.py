@@ -1,42 +1,42 @@
-In [37]: history
+
 from django.db import models
 from users_app.models import *
 users.object.all()
 User.objects.create(first_name:"axsos", last_name:"Ramallah", email_adress:"axsos@gmail.com", age:25)
-User.object.all()
+
 User.objects.create(last_name:"axsos", first_name:"Ramallah", email_adress:"axsos@gmail.com", age:25)
-User.objects.create(last_name="axsos", first_name="Ramallah", email_adress="axsos@gmail.com", age=25)
-User.objects.create(last_name="axsos", first_name="Ramallah", email_address="axsos@gmail.com", age=25)
-User.object.all()
-User.objects.all()
+
 User.objects.create(last_name="majed", first_name="Jerusalem", email_address="rt@gmail.com", age=15)
 User.objects.create(last_name="ranni", first_name="Cali", email_address="mk@gmail.com", age=30)
+
 User.objects.all()
-for i in User.objects:
-    print(i)
-for i in User.objects.all():
-    print(i)
-for i in User.objects:
-    print(i.value)
-for i in User.objects:
-    print(i.values)
+
+
 User.objects.all().values()
+
 User.objects.last()
-User.objects.last().values()
+
+
 User.objects.values().last()
+
 User.objects.values().first()
-User.objects.get(id=3)
-User.objects.get(id=3).last_name = "Pancakes"
-User.objects.get(id=3).save()
+
+
 User.objects.get(id=3).values()
+
 User.objects.values().get(id=3)
+
 c = User.objects.get(id=3)
 c.last_name = "Pancakes"
 c.save()
 User.objects.values().get(id=3)
+
 c = User.objects.get(id=2)
 c.delete()
 User.objects.all().values()
+
 User.objects.all().order_by("first_name")
+
 User.objects.all().order_by("-first_name")
-history
+
+
