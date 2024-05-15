@@ -1,0 +1,139 @@
+  516  python manage.py makemigrations
+  517  python manage.py migrate
+  518  python manage.py shell
+
+
+
+1### from dojo_ninjas_app.models import *
+
+2### obj = dojo.objects.create(name = 'axsos' , city= 'ramallah' , state = '
+   ...: ps')
+
+3##obj = Dojo.objects.create(name = 'axsos' , city= 'ramallah' , state = '
+   ...: ps')
+
+4#### obj = Dojo.objects.create(name = 'code' , city= 'bethlahem' , state = '
+   ...: ps')
+5###: obj = Dojo.objects.create(name = 'friends' , city= 'jenin' , state = 'p
+   ...: s')
+6###
+ Dojo.objects.all()
+Out[7]: <QuerySet [<Dojo: Dojo object (1)>, <Dojo: Dojo object (2)>, <Dojo: Dojo object (3)>]>
+7###
+obj = Dojo.objects.all()
+
+ obj.delete()
+Out[9]: (3, {'dojo_ninjas_app.Dojo': 3})
+
+In [10]: obj = Dojo.objects.all()
+
+In [11]: obj
+Out[11]: <QuerySet []>
+
+In [12]: obj = Dojo.objects.create(name = 'axsos' , city= 'ramallah' , state =
+    ...: 'ps')
+
+In [13]: obj = Dojo.objects.create(name = 'code' , city= 'bethlahem' , state =
+    ...: 'ps')
+
+In [14]: obj = Dojo.objects.create(name = 'friends' , city= 'jenin' , state = '
+    ...: ps')
+
+In [15]: Dojo.objects.all()
+Out[15]: <QuerySet [<Dojo: Dojo object (4)>, <Dojo: Dojo object (5)>, <Dojo: Dojo object (6)>]>
+
+In [16]: first_ninja = Dojo.objects.get(id =4)
+
+In [17]: first_dojo = Dojo.objects.get(id =4)
+
+In [18]: first_ninja = Ninja.objects.creat (first_name = 'ibrahim' , last_name
+    ...: = 'khalil' , dojo = first_dojo)
+
+In [19]: first_ninja = Ninja.objects.create (first_name = 'ibrahim' , last_name
+    ...:  = 'khalil' , dojo = first_dojo)
+
+In [20]: first_ninja = Ninja.objects.create (first_name = 'majed' , last_name =
+    ...:  'khaldi' , dojo = first_dojo)
+
+In [21]: first_ninja = Ninja.objects.create (first_name = 'batata' , last_name
+    ...: = 'poteto' , dojo = first_dojo)
+
+
+In [22]: Ninja.objects.all()
+Out[22]: <QuerySet [<Ninja: Ninja object (1)>, <Ninja: Ninja object (2)>, <Ninja: Ninja object (3)>]>
+
+In [23]: first_dojo = Dojo.objects.get(id =5)
+
+In [24]: first_ninja = Ninja.objects.create (first_name = 'layth' , last_name =
+    ...:  'ammer' , dojo = first_dojo)
+
+In [25]: first_ninja = Ninja.objects.create (first_name = 'saeed' , last_name =
+    ...:  'qtesh' , dojo = first_dojo)
+
+In [26]: first_ninja = Ninja.objects.create (first_name = 'subhi' , last_name =
+    ...:  'alahmad' , dojo = first_dojo)
+
+In [27]: first_dojo = Dojo.objects.get(id =6)
+
+In [28]: first_ninja = Ninja.objects.create (first_name = 'kaka' , last_name =
+    ...: 'keko' , dojo = first_dojo)
+
+In [29]: first_ninja = Ninja.objects.create (first_name = 'zaza' , last_name =
+    ...: 'zezo' , dojo = first_dojo)
+
+In [30]: first_ninja = Ninja.objects.create (first_name = 'lala' , last_name =
+    ...: 'lelo' , dojo = first_dojo)
+
+In [31]: first_dojo = Dojo.objects.get(id =4)
+
+
+In [35]: for ninja in first_dojo.ninjas.all():
+    ...:     print(ninja.first_name , ninja.last_name)
+    ...:
+ibrahim khalil
+majed khaldi
+batata poteto
+
+In [36]: first_dojo = Dojo.objects.get(id =6)
+
+In [37]: for ninja in first_dojo.ninjas.all():
+    ...:     print(ninja.first_name , ninja.last_name)
+    ...:
+kaka keko
+zaza zezo
+lala lelo
+
+In [38]: first_ninja = Ninja.objects.last()
+
+In [39]: print (first_ninja.dojo.name)
+friends
+
+
+
+
+ python manage.py makemigrations
+No changes detected
+
+
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojo_ninjas_app, sessions
+Running migrations:
+  No migrations to apply.
+(djangoPy3Env)
+
+
+obj = Dojo.objects.create(name = 'tobacoo academy' , city= 'galaxy' , s
+   ...: tate = 'bA')
+
+In [4]: Dojo.objects.all()
+Out[4]: <QuerySet [<Dojo: Dojo object (4)>, <Dojo: Dojo object (5)>, <Dojo: Dojo object (6)>, <Dojo: Dojo object (7)>]>
+
+In [5]: obj = Dojo.objects.get(id =7)
+
+In [6]: print (obj)
+Dojo object (7)
+
+In [7]: print (obj.name)
+tobacoo academy
+
