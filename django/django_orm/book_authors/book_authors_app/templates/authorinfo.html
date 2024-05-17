@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h1, h3 {
+        color: #333;
+    }
+
+    strong {
+        color: #007bff;
+    }
+
+    p {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Author Name: <strong>{{fname}} {{lname}}</strong></h1>
+        <h3>Author Id: <strong>{{id}}</strong></h3>
+        <h3>Notes</h3><p>{{notes}}</p>
+        <h3>Books:</h3>
+        {% for i in bk%}
+        <li>{{i.title}}</li>
+        {% endfor %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <select name="booktoauthor">
+                {% for i in extrabook%}
+                <option value="{{i.id}}">{{i.title}} </option>
+                {% endfor %}
+            </select>
+            <button>add</button>
+        </form>
+    </div>
+    
+</body>
+</html>
