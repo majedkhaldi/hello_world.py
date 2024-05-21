@@ -18,11 +18,12 @@ def register(request):
                 messages.error(request, value, extra_tags= 'fname')
         return redirect('/')
     else:
-        request.session['fname'] = request.POST['fname']
+        fname = request.POST['fname']
         lname = request.POST['lname']
         email = request.POST['email']
         password = request.POST['password']
-        User.objects.create(first_name = request.session['fname'], last_name = lname, email = email, password = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode())
+        logged_user = User.objects.create(first_name = fname, last_name = lname, email = email, password = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode())
+        request.session['userid'] = logged_user.id
         return redirect('/success')
 
 def login(request):
