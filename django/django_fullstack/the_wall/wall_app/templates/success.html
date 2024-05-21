@@ -33,6 +33,11 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             resize: vertical;
+            display: block;
+        }
+        .commentarea{
+            width: 90%;
+            height: 20px;
         }
         button {
             padding: 10px 20px;
@@ -44,6 +49,9 @@
         }
         button:hover {
             background-color: #0056b3;
+        }
+        .addcomment {
+            margin-left: 50px;
         }
         .message, .comment {
             background-color: white;
@@ -79,9 +87,9 @@
                     <a href="/deletecomment/{{comment.id}}/{{request.session.userid}}">Delete Comment</a>
                 </div>
             {% endfor %}
-            <form action="addcomment/{{message.id}}/{{request.session.userid}}" method="post">
+            <form class="addcomment" action="addcomment/{{message.id}}/{{request.session.userid}}" method="post">
                 {% csrf_token %}
-                <textarea name="aa" placeholder="Add a comment"></textarea>
+                <textarea class="commentarea" name="aa" placeholder="Add a comment"></textarea>
                 <button>Post Comment</button>
             </form>
         </div>

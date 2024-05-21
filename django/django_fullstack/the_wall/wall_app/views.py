@@ -38,7 +38,7 @@ def wall(request):
     if 'userid' not in request.session:
         return redirect('/')
     data = {
-    "messages": Message.objects.all()
+    "messages": Message.objects.all().order_by("-created_at")
     }
     return render(request,"success.html", data)
 
