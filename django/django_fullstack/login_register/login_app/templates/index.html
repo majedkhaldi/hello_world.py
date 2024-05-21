@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    button {
+        display: block;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Register</h1>
+            <form action="/register" method="post">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="fname"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm PW</td>
+                        <td><input type="password" name="cpassword"></td>
+                    </tr>
+                </table>
+                <button>Register</button>
+            </form>
+
+
+        </div>
+        <div class="right">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="loginemail"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="loginpassword"></td>
+                    </tr>
+                </table>
+                <button>Login</button>
+            </form>
+            {% for message in messages %}
+                {% if 'emailnotfound' in message.tags %}
+                    <li>{{ message }}</li>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    
+       
+    {% for message in messages %}
+        {% if 'registration' in message.tags %}
+            <li>{{ message }}</li>
+        {% endif %}    
+    {% endfor %}
+
+
+</body>
+</html>
