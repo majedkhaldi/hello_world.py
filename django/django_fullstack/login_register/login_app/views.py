@@ -39,7 +39,10 @@ def login(request):
 def success(request):
     if 'userid' not in request.session:
         return redirect('/')
-    return render(request,"success.html")
+    data = {
+        "usernow" : User.objects.get(id=request.session['userid'])
+    }
+    return render(request,"success.html",data)
 
 def logout(request):
     del request.session['userid']
