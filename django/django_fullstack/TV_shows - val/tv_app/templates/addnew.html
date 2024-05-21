@@ -11,18 +11,25 @@
             <h1>Add a new show</h1>
             <a href="/shows">Go Back</a>
         </div>
-        <form action="/shows/makeedit/{{id}}" method="post">
+        <form action="/shows/addnew" method="post">
             {% csrf_token %}
             <label>Title</label>
-            <input type="text" name="title" value={{title}}>
+            <input type="text" name="title">
             <label>Network</label>
-            <input type="text" name="network" value={{network}}>
+            <input type="text" name="network">
             <label>Release date</label>
-            <input type="date" name="releasedate" value="{{releasedate}}">
+            <input type="date" name="releasedate">
             <label>Description</label>
-            <textarea name="description" id="" >{{description}}</textarea>
-            <button>Update</button>
+            <textarea name="description" id=""></textarea>
+            <button>Create</button>
         </form>
+        {% if messages %}
+        <ul class="messages">    
+        {% for message in messages %}    
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+        {% endfor %}
+        </ul>
+        {% endif %}
     </div>
 </body>
 </html>

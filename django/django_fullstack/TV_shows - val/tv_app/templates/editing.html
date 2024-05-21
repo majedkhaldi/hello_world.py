@@ -18,11 +18,19 @@
             <label>Network</label>
             <input type="text" name="network" value={{network}}>
             <label>Release date</label>
-            <input type="date" name="releasedate" value="{{releasedate}}">
+            <input type="date" name="releasedate" value="{{releasedate}}"
+            >
             <label>Description</label>
             <textarea name="description" id="" >{{description}}</textarea>
             <button>Update</button>
         </form>
+        {% if messages %}
+        <ul class="messages">    
+        {% for message in messages %}    
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+        {% endfor %}
+        </ul>
+        {% endif %}
     </div>
 </body>
 </html>

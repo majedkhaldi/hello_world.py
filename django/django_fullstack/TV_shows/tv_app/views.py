@@ -44,7 +44,7 @@ def editpage(request,x):
         "title" : showobject.title,
         "network" : showobject.network,
         "description" : showobject.description,
-        "releasedate" : showobject.release_date,
+        "releasedate" : showobject.release_date.strftime('%Y-%m-%d'),
     }
     return render(request, "editing.html", data)
 

@@ -12,10 +12,7 @@ def register(request):
     errors = User.objects.basic_validator(request.POST)
     if len(errors) > 0:
         for key, value in errors.items():
-            if key == 'email':
-                messages.error(request, value, extra_tags= 'email')
-            if key == 'fname':
-                messages.error(request, value, extra_tags= 'fname')
+            messages.error(request, value)
         return redirect('/')
     else:
         fname = request.POST['fname']
